@@ -1,0 +1,13 @@
+Package: shinygCAPTCHAv3
+Type: Package
+Title: Package To Use Google reCAPTCHAv3 in Shiny Web Applications 
+Version: 0.1.0
+Author: Siddharth Arthi
+Maintainer: Siddharth Arthi <siddharthsiddhu2395@gmail.com>
+Description: This package provides custom functions to use Google's reCAPTCHAv3 service in your Shiny Web Applications.
+License: GPL-2
+Encoding: UTF-8
+LazyData: true
+Imports:
+  httr,jsonlite
+RoxygenNote: 7.0.2
