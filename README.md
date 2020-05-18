@@ -20,14 +20,14 @@ library(shinygCAPTCHAv3)
 
 ui <- fluidPage(
   useShinyjs(),
-  GreCAPTCHAv3Ui("6LdtJfkUAAAAAFlCBbG6Nr0b98Q2q3fIaZyfdVrf","homepage","responseReceived")
+  GreCAPTCHAv3Ui(<your site key>,"homepage","responseReceived")
 )
 
 server <- function(input, output, session) {
   
   observeEvent(input$responseReceived,{
 
-    result <- GreCAPTCHAv3Server("6LdtJfkUAAAAAOyIvfSlRzJ3x8PALVjTJzGuwaKt",input$responseReceived)
+    result <- GreCAPTCHAv3Server(<your secret key>,input$responseReceived)
     
     if(result$success){
       
