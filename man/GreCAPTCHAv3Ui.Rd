@@ -2,21 +2,17 @@
 % Please edit documentation in R/shinygCAPTCHAv3.R
 \name{GreCAPTCHAv3Ui}
 \alias{GreCAPTCHAv3Ui}
-\title{shinygCAPTCHAv3}
+\title{GreCAPTCHAv3Ui}
 \usage{
 GreCAPTCHAv3Ui(siteKey, action, fieldID)
 }
 \arguments{
-\item{siteKey}{}
+\item{siteKey}{The Site key generated in Google reCAPTCHA admin console for your domain}
 
-\item{action}{}
+\item{action}{Type of action to be used by reCAPTCHA validation service. Available options are 'homepage', 'login', 'social' and 'e-commerce'. For more details, refer https://developers.google.com/recaptcha/docs/v3}
 
-\item{fieldID}{}
-
-\item{secretKey}{}
-
-\item{reCaptchaResponse}{}
+\item{fieldID}{The field ID to which the response token needs to be sent back to Shiny Server}
 }
 \description{
-Package To Use Google reCAPTCHAv3 in Shiny Web Applications
+UI part of the package to invoke reCAPTCHAv3 Javascript
 }
