@@ -1,16 +1,12 @@
-#' @title shinygCAPTCHAv3
+#' @title GreCAPTCHAv3Ui
 #'
-#' @description Package To Use Google reCAPTCHAv3 in Shiny Web Applications
+#' @description UI part of the package to invoke reCAPTCHAv3 Javascript
 #'
-#' @param siteKey
+#' @param siteKey The Site key generated in Google reCAPTCHA admin console for your domain
 #'
-#' @param action
+#' @param action Type of action to be used by reCAPTCHA validation service. Available options are 'homepage', 'login', 'social' and 'e-commerce'. For more details, refer https://developers.google.com/recaptcha/docs/v3
 #'
-#' @param fieldID
-#'
-#' @param secretKey
-#'
-#' @param reCaptchaResponse
+#' @param fieldID The field ID to which the response token needs to be sent back to Shiny Server
 #'
 #' @return NULL
 #'
@@ -23,11 +19,22 @@ tagList(tags$head(
 
     paste0(" grecaptcha.ready(function () {
 		     grecaptcha.execute('",siteKey,"', { action: '",action,"' }).then(function (token) {
-			 Shiny.onInputChange('responseReceived',token);
+			 Shiny.onInputChange('",fieldID,"',token);
 			 });
 			});"))
 ))
 }
+
+#' @title GreCAPTCHAv3Server
+#'
+#' @description Server part of the package to receive response token from invoked UI script
+#'
+#' @param secretKey The Secret key generated in Google reCAPTCHA admin console for your domain
+#'
+#' @param reCaptchaResponse The response received from GreCAPTCHAv3Ui 'Field'
+#'
+#' @return NULL
+#'
 #' @export GreCAPTCHAv3Server
 
 GreCAPTCHAv3Server <- function(secretKey, reCaptchaResponse) {
