@@ -13,6 +13,8 @@ devtools::install_github("sarthi2395/shinygCAPTCHAv3")
 Sample App
 ----------
 
+At this stage, you should have already registered your domain in reCAPTCHA admin console and have the site and secret keys ready.
+
 ``` r
 library(shiny)
 library(shinyjs)
