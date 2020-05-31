@@ -2,7 +2,7 @@
 
 ![Logo](PackageLogo.jpg)
 
-Package to use Google reCAPTCHAv3 in RShiny web applications.
+Package to use Google reCAPTCHAv3 in RShiny web application.
 
 How to install
 --------------
