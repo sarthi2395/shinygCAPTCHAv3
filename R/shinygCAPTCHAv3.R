@@ -1,3 +1,21 @@
+#' shinygCAPTCHAv3
+#'
+#' Easy implementation of Google reCAPTCHAv3 in RShiny Web Applications.
+#'
+#' \code{shinygCAPTCHAv3} can be implemented as follows.
+#'
+#' Add the function \code{GreCAPTCHAv3Ui} in the UI part of your RShiny web application to invoke reCAPTCHAv3 Javascript.
+#'
+#' Add the function \code{GreCAPTCHAv3Server} in the server part of your RShiny web application to receive response token and verify it with Google's servers for verification.
+#'
+#' Click \href{https://sarthi2395.shinyapps.io/shinygCAPTCHAv3}{here} to see a demo.
+#'
+#' @docType package
+#'
+#' @name shinygCAPTCHAv3
+
+NULL
+
 #' @title GreCAPTCHAv3Ui
 #'
 #' @description UI part of the package to invoke reCAPTCHAv3 Javascript
