@@ -1,6 +1,6 @@
 # shinygCAPTCHAv3
 
-![Logo] (PackageLogo.jpg)
+![Logo](ProjectLogo.jpg)
 
 Package to use Google reCAPTCHAv3 in RShiny web application.
 
